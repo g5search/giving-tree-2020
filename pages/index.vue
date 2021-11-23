@@ -40,7 +40,7 @@
                 Amazon Wishlist*
               </a>
               <br>
-              <strong class="text-white">
+              <strong class="text-ocre">
                 *Please make sure to claim the tag before purchasing the items via the wishlist.
               </strong>
             </p>
