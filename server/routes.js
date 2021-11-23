@@ -23,7 +23,7 @@ module.exports = (app) => {
         const gift = await models.gift.findOne({ where: { id: gifts[i].id, gifter: null} })
         await gift.update({ claimed: true, gifter: email })
       }
-      // mailer.send(gifts, email, name)
+      mailer.send(gifts, email, name)
       res.sendStatus(201)
     } catch (error) {
       res.sendStatus(503)
