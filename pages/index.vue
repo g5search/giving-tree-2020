@@ -32,17 +32,19 @@
           </div>
           <div class="text-right" style="flex: 0 1 60%;">
             <p class="my-2">
-              {{ g.description }}
+              <strong>{{ g.description }}</strong>
             </p>
             <p v-if="g.options">
               {{ g.options.name }}
-              <a v-if="g.options.wishlist" :href="g.options.wishlist" target="_blank">
-                Amazon Wishlist*
+              <a v-if="g.options.wishlist" :href="g.options.wishlist" target="_blank" class="text-taupe">
+              <strong>
+                Link to Amazon Wishlist*
+              </strong>
               </a>
               <br>
-              <strong class="text-taupe">
+              <span class="text-taupe">
                 *Please make sure to claim the tag before purchasing the items via the wishlist.
-              </strong>
+              </span>
             </p>
             <b-form-checkbox
               v-model="g.isActive"
@@ -73,12 +75,12 @@
     </div>
     <div class="fixed-bottom text-ocre">
       <p>
-        If you have any questions or need assistance using the G5 Giving Tree, please reach out to Kayla Bluhm via Slack or email
+        Questions? Reach out to Kayla Bluhm via Slack or
         <a href="mailto:kayla.bluhm@getg5.com">
-          kayla.bluhm@getg5.com
-        </a>
-        .
+          kayla.bluhm@getg5.com</a><br />
+          <span class="text-credits">Created 2020 David Miller | Updated 2021 Mark Bluhm</span>
       </p>
+
     </div>
   </div>
 </template>
