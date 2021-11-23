@@ -17,7 +17,7 @@
         <b-list-group-item
           v-for="g in gifts"
           :key="`added-${g.id}`"
-          :class="[{ 'is-active': g.isActive }, `bg-${whichGroup(g.group)}`]"
+          :class="[{ 'is-active': g.isActive }, `bg-${whichGroup(g.group)}-background`]"
           style="border-radius: 15px;"
           class="d-flex justify-content-between mx-3 mb-2 gift-list-item"
         >
@@ -36,11 +36,11 @@
             </p>
             <p v-if="g.options">
               {{ g.options.name }}
-              <a v-if="g.options.wishlist" :href="g.options.wishlist" target="_blank">
+              <a v-if="g.options.wishlist" :href="g.options.wishlist" target="_blank" :class="[{ 'is-active': g.isActive }, `text-${whichGroup(g.group)}-tertiary`]">
                 Amazon Wishlist*
               </a>
               <br>
-              <strong class="text-taupe">
+              <strong :class="[{ 'is-active': g.isActive }, `text-${whichGroup(g.group)}-secondary`]">
                 *Please make sure to claim the tag before purchasing the items via the wishlist.
               </strong>
             </p>
@@ -124,10 +124,10 @@ export default {
     },
     whichGroup(g) {
       return g === 'families'
-        ? 'green'
+        ? 'cat3'
         : g === 'pets'
-          ? 'red'
-          : 'blue'
+          ? 'cat2'
+          : 'cat1'
     },
     preSubmit() {
       this.added = this.gifts.filter(gift => gift.isActive)
