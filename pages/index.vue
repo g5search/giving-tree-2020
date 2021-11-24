@@ -41,10 +41,10 @@
                 Link to Amazon Wishlist*
               </strong>
               </a>
-              <br>
-              <span class="text-taupe">
-                *Please make sure to claim the tag before purchasing the items via the wishlist.
-              </span>
+            </p>
+            <span class="text-taupe">
+              *Please make sure to claim the tag before purchasing the items.
+            </span>
             </p>
             <b-form-checkbox
               v-model="g.isActive"
