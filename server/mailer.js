@@ -9,7 +9,7 @@ mailer.setApiKey(key)
 function createGiftTemplate(gifts, toName) {
   let html = `
     <h1>Hi, ${toName}! Here are the gifts you selected.</h1>
-    <i>Thank you for participating in G5's 2020 Virtual Giving Tree! Please be sure to purchase your gift(s) by 12/11 and include this printed or written information with your gift(s) upon drop off/pick up.</i>
+    <i>Thank you for participating in G5's 2021 Virtual Giving Tree! Please be sure to purchase your gift(s) by 12/10 and include this printed or written information with your gift(s) upon drop off/pick up.</i>
   `
   gifts.forEach((gift) => {
     const options = gift.options ? JSON.stringify(gift.options) : ''
