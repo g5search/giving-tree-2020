@@ -111,7 +111,7 @@ export default {
   }
 }
 .green { background-color: #017c68; }
-.red { background-color: #e8e8e8; }
+.red { background-color: #86759f; }
 .blue { background-color: #01677c; }
 .trunk {
   width: 50px;

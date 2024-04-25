@@ -20,7 +20,7 @@ module.exports = (app) => {
         defaults: { name, email }
       })
       for (let i = 0; i < gifts.length; i++) {
-        const gift = await models.gift.findOne({ where: { id: gifts[i].id } })
+        const gift = await models.gift.findOne({ where: { id: gifts[i].id, gifter: null} })
         await gift.update({ claimed: true, gifter: email })
       }
       mailer.send(gifts, email, name)

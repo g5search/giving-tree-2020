@@ -19,8 +19,8 @@
         <b-icon-gift-fill variant="blue" />
         Seniors
       </b-btn>
-      <b-btn variant="transparent" class="text-light" style="font-size: 1.5em;" @click="$emit('on-selected', 'pets')">
-        <b-icon-gift-fill variant="light" />
+      <b-btn variant="transparent" class="text-red" style="font-size: 1.5em;" @click="$emit('on-selected', 'pets')">
+        <b-icon-gift-fill variant="red" />
         Pets
       </b-btn>
     </div>
